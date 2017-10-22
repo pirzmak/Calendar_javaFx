@@ -1,0 +1,71 @@
+.headerGrid{
+    -fx-background-color: white;
+}
+
+.headerPane{
+    -fx-background-color: #cccce9;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.calendarGrid{
+    -fx-spacing: 2px;
+}
+
+.calendarGridOuter{
+    -fx-padding: 1px;
+}
+
+.calendarGridCenter{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-margin: 1px;
+}
+
+.calendarGridCenterTitle{
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: black;
+    -fx-border-radius: 1px;
+    -fx-background-color: white;
+}
+
+.headerCorner{
+    -fx-background-color: #cce6e6;
+    -fx-max-width: 58px;
+}
+
+.headerLabels{
+    -fx-text-fill: darkblue;
+    -fx-alignment: center;
+}
+
+.calendarGridDayLabel{
+    -fx-text-fill: darkblue;
+    -fx-alignment: center-left;
+    -fx-max-width: 999999999999999999;
+    -fx-padding: 0px 0px 0px 5px;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: white;
+}
+
+.scrollContent {
+    -fx-padding: 3px;
+    -fx-spacing: 2px;
+}
+
+.eventPanel{
+    -fx-padding: 1px;
+    -fx-margin: 2px;
+    -fx-border-color: #008080;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-max-width: 999999999999999999;
+}

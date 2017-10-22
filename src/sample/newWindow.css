@@ -1,0 +1,7 @@
+.myPane {
+    -fx-padding: 0 10px;
+}
+
+.myCenter {
+    -fx-alignment: center;
+}

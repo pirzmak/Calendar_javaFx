@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" prefHeight="800.0" prefWidth="1200.0" styleClass="headerGrid" stylesheets="@fxcalendar.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="600.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <center>
+            <GridPane fx:id="calendarGrid" styleClass="calendarGrid" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="4">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="5">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="6">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="calendarGridOuter" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <styleClass>
+                              <String fx:value="calendarGridCenter" />
+                              <String fx:value="headerPane" />
+                           </styleClass>
+                           <children>
+                              <StackPane maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" styleClass="calendarGridCenterTitle">
+                                 <children>
+                                    <Label styleClass="calendarGridDayLabel" text="Label" />
+                                 </children>
+                              </StackPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <HBox maxHeight="10.0" maxWidth="1.7976931348623157E308" prefHeight="10.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="headerCorner" />
+                        <String fx:value="headerPane" />
+                     </styleClass>
+                      <children>
+                          <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
+                      </children></StackPane>
+                  <GridPane maxHeight="50.0" maxWidth="1.7976931348623157E308" styleClass="headerGrid" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0">
+                      </ColumnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                               <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Tuesday" />
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Wednesday" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Tursday" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Label" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Friday" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Saturday" />
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="6" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Sunday" />
+                           </children></StackPane>
+                        <StackPane layoutX="67.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Monday" />
+                          </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+                  <StackPane maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="100.0" prefHeight="50.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                   <styleClass>
+                       <String fx:value="headerCorner" />
+                       <String fx:value="headerPane" />
+                   </styleClass><children>
+                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
+                  </children></StackPane>
+               </children></HBox>
+         </top>
+         <bottom>
+             <HBox maxHeight="10.0" maxWidth="1.7976931348623157E308" prefHeight="10.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                 <children>
+                     <StackPane maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                         <styleClass>
+                             <String fx:value="headerCorner" />
+                             <String fx:value="headerPane" />
+                         </styleClass>
+                         <children>
+                             <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
+                         </children></StackPane>
+                     <GridPane maxHeight="50.0" maxWidth="1.7976931348623157E308" styleClass="headerGrid" HBox.hgrow="ALWAYS">
+                         <columnConstraints>
+                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0">
+                             </ColumnConstraints>
+                             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                         </columnConstraints>
+                         <rowConstraints>
+                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         </rowConstraints>
+                         <children>
+                             <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Tuesday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Wednesday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Tursday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Label" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Friday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Saturday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.columnIndex="6" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" text="Sunday" />
+                                 </children>
+                             </StackPane>
+                             <StackPane layoutX="67.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Monday" />
+                                 </children>
+                             </StackPane>
+                         </children>
+                     </GridPane>
+                     <StackPane maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="100.0" prefHeight="50.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                         <styleClass>
+                             <String fx:value="headerCorner" />
+                             <String fx:value="headerPane" />
+                         </styleClass><children>
+                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
+                     </children></StackPane>
+                 </children></HBox>
+         </bottom>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="leftPanel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" stylesheets="@fxcalendar.css" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" stylesheets="@fxcalendar.css" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                            <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                            </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                            <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                  </GridPane>
+               </children></VBox>
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="rightPanel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerPane" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="W" />
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="2017" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</GridPane>
