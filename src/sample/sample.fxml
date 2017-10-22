@@ -51,7 +51,11 @@
                                     <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -69,7 +73,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -87,7 +95,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -105,7 +117,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -123,7 +139,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -163,7 +183,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -181,7 +205,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -199,7 +227,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -217,7 +249,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -235,7 +271,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -253,7 +293,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -271,7 +315,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -289,7 +337,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -307,7 +359,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -325,7 +381,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -343,7 +403,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -361,7 +425,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -379,7 +447,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -397,7 +469,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -415,7 +491,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -433,7 +513,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -451,7 +535,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -469,7 +557,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -487,7 +579,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -505,7 +601,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -523,7 +623,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -541,7 +645,11 @@
                                     <Label styleClass="calendarGridDayLabel" text="Label" />
                                  </children>
                               </StackPane>
-                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@fxcalendar.css">
+                                 <content>
+                                    <VBox maxWidth="1.7976931348623157E308" prefWidth="600.0" styleClass="scrollContent" />
+                                 </content>
+                              </ScrollPane>
                            </children>
                         </VBox>
                      </children>
@@ -558,7 +666,7 @@
                         <String fx:value="headerPane" />
                      </styleClass>
                       <children>
-                          <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
+                          <Label fx:id="prevButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#goToPrevWeek" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
                       </children></StackPane>
                   <GridPane maxHeight="50.0" maxWidth="1.7976931348623157E308" styleClass="headerGrid" HBox.hgrow="ALWAYS">
                     <columnConstraints>
@@ -619,7 +727,7 @@
                        <String fx:value="headerCorner" />
                        <String fx:value="headerPane" />
                    </styleClass><children>
-                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
+                      <Label fx:id="prevButton2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#goToPrevWeek" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Prev" />
                   </children></StackPane>
                </children></HBox>
          </top>
@@ -632,7 +740,7 @@
                              <String fx:value="headerPane" />
                          </styleClass>
                          <children>
-                             <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
+                             <Label fx:id="nextButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#goToNextWeek" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
                          </children></StackPane>
                      <GridPane maxHeight="50.0" maxWidth="1.7976931348623157E308" styleClass="headerGrid" HBox.hgrow="ALWAYS">
                          <columnConstraints>
@@ -696,7 +804,7 @@
                              <String fx:value="headerCorner" />
                              <String fx:value="headerPane" />
                          </styleClass><children>
-                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
+                         <Label fx:id="nextButton2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#goToNextWeek" styleClass="headerLabels" stylesheets="@fxcalendar.css" text="Next" />
                      </children></StackPane>
                  </children></HBox>
          </bottom>
