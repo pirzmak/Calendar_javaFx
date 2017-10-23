@@ -36,6 +36,7 @@
 .headerCorner{
     -fx-background-color: #cce6e6;
     -fx-max-width: 58px;
+    -fx-cursor: hand;
 }
 
 .headerLabels{

@@ -54,6 +54,16 @@ public class Controller extends RootController{
         calendarPanel = (GridPane) stage.getScene().lookup("#calendarGrid");
         leftPanel = (GridPane) stage.getScene().lookup("#leftPanel");
         rightPanel = (GridPane) stage.getScene().lookup("#rightPanel");
+
+        DropShadow shadow = new DropShadow();
+        stage.getScene().lookup("#prevButton").addEventHandler(MouseEvent.MOUSE_ENTERED, e -> stage.getScene().lookup("#prevButton").setEffect(shadow));
+        stage.getScene().lookup("#prevButton2").addEventHandler(MouseEvent.MOUSE_ENTERED, e -> stage.getScene().lookup("#prevButton2").setEffect(shadow));
+        stage.getScene().lookup("#nextButton").addEventHandler(MouseEvent.MOUSE_ENTERED, e -> stage.getScene().lookup("#nextButton").setEffect(shadow));
+        stage.getScene().lookup("#nextButton2").addEventHandler(MouseEvent.MOUSE_ENTERED, e -> stage.getScene().lookup("#nextButton2").setEffect(shadow));
+        stage.getScene().lookup("#prevButton").addEventHandler(MouseEvent.MOUSE_EXITED, e -> stage.getScene().lookup("#prevButton").setEffect(null));
+        stage.getScene().lookup("#prevButton2").addEventHandler(MouseEvent.MOUSE_EXITED, e -> stage.getScene().lookup("#prevButton2").setEffect(null));
+        stage.getScene().lookup("#nextButton").addEventHandler(MouseEvent.MOUSE_EXITED, e -> stage.getScene().lookup("#nextButton").setEffect(null));
+        stage.getScene().lookup("#nextButton2").addEventHandler(MouseEvent.MOUSE_EXITED, e -> stage.getScene().lookup("#nextButton2").setEffect(null));
     }
 
     private void loadView() {
@@ -61,19 +71,24 @@ public class Controller extends RootController{
         int weekDay = 0;
         for (Node node : childrens) {
             LocalDate day = firstDayOfWeek.plusDays(weekDay);
+
             DropShadow shadow = new DropShadow();
             node.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> node.setEffect(shadow));
             node.addEventHandler(MouseEvent.MOUSE_EXITED, e -> node.setEffect(null));
+
             node.setCursor(Cursor.HAND);
+
             getCalendarGridCellLabel(node).setText(day.format(DateTimeFormatter.ofPattern("LLLL dd")));
             getCalendarGridCellLabel(node).getStyleClass().clear();
             ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().clear();
             getCalendarGridCellLabel(node).getStyleClass().add("calendarGridDayLabel");
             ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().add("scroll-pane");
+
             if(day.isEqual(LocalDate.now())) {
                 getCalendarGridCellLabel(node).getStyleClass().add("today");
                 ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().add("today");
             }
+
             getCalendarGridCellEventsBox(node).getChildren().clear();
             addDoubleClickListener(node, day);
 
@@ -82,7 +97,6 @@ public class Controller extends RootController{
             events.forEach(e -> getCalendarGridCellEventsBox(node).getChildren().add(this.newEventController.createNewEventPane(e, day)));
             weekDay++;
         }
-
         loadLeftRightPanels(firstDayOfWeek);
     }
 
