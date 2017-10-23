@@ -33,7 +33,7 @@ abstract class RootController {
         return ((VBox) (((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getContent()));
     }
 
-    private VBox getCalendarGridCell(Node node) {
+    VBox getCalendarGridCell(Node node) {
         return ((VBox) (((StackPane) node).getChildren().get(0)));
     }
 

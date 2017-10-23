@@ -2,8 +2,12 @@ package sample;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import sample.calendar.Calendar;
@@ -57,9 +61,21 @@ public class Controller extends RootController{
         int weekDay = 0;
         for (Node node : childrens) {
             LocalDate day = firstDayOfWeek.plusDays(weekDay);
+            DropShadow shadow = new DropShadow();
+            node.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> node.setEffect(shadow));
+            node.addEventHandler(MouseEvent.MOUSE_EXITED, e -> node.setEffect(null));
+            node.setCursor(Cursor.HAND);
             getCalendarGridCellLabel(node).setText(day.format(DateTimeFormatter.ofPattern("LLLL dd")));
+            getCalendarGridCellLabel(node).getStyleClass().clear();
+            ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().clear();
+            getCalendarGridCellLabel(node).getStyleClass().add("calendarGridDayLabel");
+            ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().add("scroll-pane");
+            if(day.isEqual(LocalDate.now())) {
+                getCalendarGridCellLabel(node).getStyleClass().add("today");
+                ((ScrollPane) (getCalendarGridCell(node).getChildren().get(1))).getStyleClass().add("today");
+            }
             getCalendarGridCellEventsBox(node).getChildren().clear();
-            addDoubleClickListener(node, Optional.empty(), day);
+            addDoubleClickListener(node, day);
 
             List<Event> events = this.loadEvents(firstDayOfWeek).stream().filter(e -> e.getDate().isEqual(day)).collect(Collectors.toList());
 
@@ -87,11 +103,11 @@ public class Controller extends RootController{
         }
     }
 
-    private void addDoubleClickListener(Node node, Optional<Event> event, LocalDate date) {
+    private void addDoubleClickListener(Node node, LocalDate date) {
         node.setOnMouseClicked(click -> {
-            if (click.getClickCount() == 2) {
+            if (click.getClickCount() == 2 && !newEventController.stage.isShowing()) {
                 try {
-                    this.newEventController.loadEventInfo(event, node, date);
+                    this.newEventController.loadEventInfo(Optional.empty(), node, date);
                     this.newEventController.show();
                 } catch (Exception e) {
                     e.printStackTrace();

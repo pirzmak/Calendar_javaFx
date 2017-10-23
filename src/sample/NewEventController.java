@@ -55,6 +55,11 @@ public class NewEventController extends RootController {
         stage.show();
     }
 
+    @FXML
+    void close() {
+        stage.close();
+    }
+
     void loadEventInfo(Optional<Event> event, Node node, LocalDate date) {
         if (event.isPresent()) {
             eventTitle.setText(event.get().getTitle());
@@ -63,14 +68,25 @@ public class NewEventController extends RootController {
             eventTo.setText(event.get().getTo().format(DateTimeFormatter.ISO_TIME));
 
             eventAccept.setOnMouseClicked(clicked -> {
-                event.get().setTitle(eventTitle.getText());
+                if(eventTitle.getText().length() > 0) {
+                    event.get().setTitle(eventTitle.getText());
+                    ((Label)((StackPane)node).getChildren().get(0)).setText(eventTitle.getText());
+                    close();
+                }
             });
         } else {
+            eventTitle.setText("");
+            eventMessage.setText("");
+            eventFrom.setText("");
+            eventTo.setText("");
 
             eventAccept.setOnMouseClicked(clicked -> {
-                Event newEvent = new Event(date, LocalTime.NOON, LocalTime.MIDNIGHT, eventTitle.getText(), eventMessage.getText());
-                calendar.addEvent(newEvent);
-                getCalendarGridCellEventsBox(node).getChildren().add(createNewEventPane(newEvent, date));
+                if(eventTitle.getText().length() > 0) {
+                    Event newEvent = new Event(date, LocalTime.NOON, LocalTime.MIDNIGHT, eventTitle.getText(), eventMessage.getText());
+                    calendar.addEvent(newEvent);
+                    getCalendarGridCellEventsBox(node).getChildren().add(createNewEventPane(newEvent, date));
+                    close();
+                }
             });
         }
     }
@@ -78,8 +94,11 @@ public class NewEventController extends RootController {
     StackPane createNewEventPane(Event event, LocalDate date){
         StackPane eventPane = new StackPane();
         eventPane.getStyleClass().add("eventPanel");
-        eventPane.getChildren().add(new Label(event.getTitle()));
+        Label label= new Label(event.getTitle());
+        label.getStyleClass().add("eventLabel");
+        eventPane.getChildren().add(label);
         addDoubleClickListener(eventPane, Optional.of(event), date);
+        eventPane.toFront();
         return eventPane;
     }
 

@@ -59,13 +59,25 @@
     -fx-spacing: 2px;
 }
 
+.today > .viewport {
+    -fx-background-color: #cce6e6;
+}
+
+.today {
+    -fx-background-color: #cce6e6;
+}
+
 .eventPanel{
     -fx-padding: 1px;
     -fx-margin: 2px;
     -fx-border-color: #008080;
-    -fx-border-width: 1px;
+    -fx-border-width: 2px;
     -fx-border-style: solid;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-max-width: 999999999999999999;
+}
+
+.eventLabel {
+    -fx-text-fill: #008080;
 }
