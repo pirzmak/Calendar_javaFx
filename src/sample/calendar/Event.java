@@ -1,9 +1,10 @@
 package sample.calendar;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Event {
+public class Event implements Serializable{
     private LocalDate date;
     private LocalTime from;
     private LocalTime to;

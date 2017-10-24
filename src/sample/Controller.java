@@ -16,6 +16,7 @@ import sample.calendar.Event;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.WeekFields;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
@@ -32,18 +33,17 @@ public class Controller extends RootController{
     private Calendar calendar;
     private LocalDate firstDayOfWeek;
 
-    private NewEventController newEventController;
+    private EventsController eventsController;
 
-    void init(Parent root, Stage stage, NewEventController newEventController, Calendar calendar) throws Exception {
+    void init(Parent root, Stage stage, EventsController eventsController, Calendar calendar) throws Exception {
         this.stage = stage;
 
         this.calendar = calendar;
         this.firstDayOfWeek = LocalDate.now().minusDays((LocalDate.now().getDayOfWeek().getValue()-1));
 
-        this.newEventController = newEventController;
+        this.eventsController = eventsController;
 
         initStage(root, "fxcalendar.css", "Hello World");
-        initMainWindow();
         loadView();
 
         stage.show();
@@ -71,6 +71,7 @@ public class Controller extends RootController{
         int weekDay = 0;
         for (Node node : childrens) {
             LocalDate day = firstDayOfWeek.plusDays(weekDay);
+            System.out.println(day);
 
             DropShadow shadow = new DropShadow();
             node.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> node.setEffect(shadow));
@@ -92,9 +93,12 @@ public class Controller extends RootController{
             getCalendarGridCellEventsBox(node).getChildren().clear();
             addDoubleClickListener(node, day);
 
-            List<Event> events = this.loadEvents(firstDayOfWeek).stream().filter(e -> e.getDate().isEqual(day)).collect(Collectors.toList());
+            List<Event> events = calendar.getEvents(day).stream()
+                    .filter(e -> e.getDate().isEqual(day))
+                    .sorted(Comparator.comparing(Event::getFrom))
+                    .collect(Collectors.toList());
 
-            events.forEach(e -> getCalendarGridCellEventsBox(node).getChildren().add(this.newEventController.createNewEventPane(e, day)));
+            events.forEach(e -> getCalendarGridCellEventsBox(node).getChildren().add(this.eventsController.createNewEventPane(e, day)));
             weekDay++;
         }
         loadLeftRightPanels(firstDayOfWeek);
@@ -119,21 +123,15 @@ public class Controller extends RootController{
 
     private void addDoubleClickListener(Node node, LocalDate date) {
         node.setOnMouseClicked(click -> {
-            if (click.getClickCount() == 2 && !newEventController.stage.isShowing()) {
+            if (click.getClickCount() == 2 && !eventsController.stage.isShowing()) {
                 try {
-                    this.newEventController.loadEventInfo(Optional.empty(), node, date);
-                    this.newEventController.show();
+                    this.eventsController.loadEventInfo(Optional.empty(), node, date);
+                    this.eventsController.show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
-    }
-
-    private List<Event> loadEvents(LocalDate start) {
-        int daysInWeek = 7;
-        LocalDate end = start.plusDays(this.calendar.getNumOfWeeks()*daysInWeek);
-        return calendar.getEvents(start, end);
     }
 
     public void goToNextWeek(){

@@ -21,6 +21,7 @@ abstract class RootController {
         scene.getStylesheets().add(getClass()
                 .getResource(cssPath).toExternalForm());
         stage.setScene(scene);
+        initMainWindow();
     }
 
     abstract void initMainWindow();

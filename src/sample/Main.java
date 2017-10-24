@@ -16,7 +16,7 @@ public class Main extends Application {
 
         FXMLLoader newEventLoader = new FXMLLoader(getClass().getResource("newWindow.fxml"));
         Parent root = (Parent) newEventLoader.load();
-        NewEventController cont = newEventLoader.getController();
+        EventsController cont = newEventLoader.getController();
         cont.init(root, calendar);
 
         FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("sample.fxml"));

@@ -17,6 +17,7 @@
 
 .calendarGridOuter{
     -fx-padding: 1px;
+    -fx-cursor: hand;
 }
 
 .calendarGridCenter{
