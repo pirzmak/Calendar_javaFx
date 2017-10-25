@@ -20,6 +20,10 @@
     -fx-cursor: hand;
 }
 
+.calendarGridOuter:hover {
+    -fx-effect: dropshadow(THREE-PASS-BOX, black, 10.0, 0.0, 0.0, 0.0);
+}
+
 .calendarGridCenter{
     -fx-background-color: white;
     -fx-border-color: black;
@@ -38,6 +42,10 @@
     -fx-background-color: #cce6e6;
     -fx-max-width: 58px;
     -fx-cursor: hand;
+}
+
+.headerCorner:hover > .label {
+    -fx-effect: dropshadow(THREE-PASS-BOX, black, 10.0, 0.0, 0.0, 0.0);
 }
 
 .headerLabels{

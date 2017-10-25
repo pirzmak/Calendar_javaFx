@@ -15,7 +15,10 @@ import sample.calendar.Event;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class EventsController extends RootController {
 
@@ -32,11 +35,11 @@ public class EventsController extends RootController {
 
     private Calendar calendar;
 
-    void init(Parent root, Calendar calendar) throws Exception {
+    void init(Parent root) throws Exception {
         this.stage = new Stage();
         this.initStage(root, "newWindow.css", "");
 
-        this.calendar = calendar;
+        this.calendar = new Calendar();
     }
 
     @Override
@@ -58,17 +61,16 @@ public class EventsController extends RootController {
     }
 
     void loadEventInfo(Optional<Event> event, Node node, LocalDate date) {
-        if (event.isPresent()) {
+        if(event.isPresent()) {
             eventTitle.setText(event.get().getTitle());
             eventMessage.setText(event.get().getMessage());
-            DateTimeFormatter  format = DateTimeFormatter.ofPattern("hh:mm");
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:mm");
             eventFrom.setText(format.format(event.get().getFrom()));
             eventTo.setText(format.format(event.get().getTo()));
 
             eventAccept.setOnMouseClicked(clicked -> {
                 if(eventTitle.getText().length() > 0) {
-                    event.get().setTitle(eventTitle.getText());
-                    ((Label)((StackPane)node).getChildren().get(0)).setText(eventTitle.getText());
+                    uploadEvent(event.get(), node);
                     close();
                 }
             });
@@ -80,35 +82,54 @@ public class EventsController extends RootController {
 
             eventAccept.setOnMouseClicked(clicked -> {
                 if(eventTitle.getText().length() > 0) {
-                    Event newEvent = new Event(date, LocalTime.NOON, LocalTime.MIDNIGHT, eventTitle.getText(), eventMessage.getText());
-                    calendar.addEvent(newEvent);
-                    getCalendarGridCellEventsBox(node).getChildren().add(createNewEventPane(newEvent, date));
+                    addNewEvent(date, node);
                     close();
                 }
             });
         }
     }
 
-    StackPane createNewEventPane(Event event, LocalDate date){
+    void refreshEvents(Node node, LocalDate date) {
+        List<Event> events = calendar.getEvents(date).stream()
+                .filter(e -> e.getDate().isEqual(date))
+                .sorted(Comparator.comparing(Event::getFrom))
+                .collect(Collectors.toList());
+
+        events.forEach(e -> getCalendarGridCellEventsBox(node).getChildren().add(this.createNewEventPane(e, date)));
+    }
+
+    private void uploadEvent(Event event, Node node) {
+        event.setTitle(eventTitle.getText());
+        ((Label) ((StackPane) node).getChildren().get(0)).setText(eventTitle.getText());
+        close();
+    }
+
+    private void addNewEvent(LocalDate date, Node node) {
+        Event newEvent = new Event(date, LocalTime.NOON, LocalTime.MIDNIGHT, eventTitle.getText(), eventMessage.getText());
+        calendar.addEvent(newEvent);
+        refreshEvents(node, date);
+    }
+
+    private StackPane createNewEventPane(Event event, LocalDate date) {
         StackPane eventPane = new StackPane();
         eventPane.getStyleClass().add("eventPanel");
 
-        DateTimeFormatter  format = DateTimeFormatter.ofPattern("hh:mm");
-        Label label= new Label(format.format(event.getFrom()) + "-" + format.format(event.getTo()) + " " + event.getTitle());
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:mm");
+        Label label = new Label(format.format(event.getFrom()) + "-" + format.format(event.getTo()) + " " + event.getTitle());
         label.getStyleClass().add("eventLabel");
 
         eventPane.getChildren().add(label);
-        addDoubleClickListener(eventPane, Optional.of(event), date);
+        addDoubleClickListener(eventPane, event, date);
         eventPane.toFront();
 
         return eventPane;
     }
 
-    private void addDoubleClickListener(Node node, Optional<Event> event, LocalDate date) {
+    private void addDoubleClickListener(Node node, Event event, LocalDate date) {
         node.setOnMouseClicked(click -> {
             if (click.getClickCount() == 2) {
                 try {
-                    loadEventInfo(event, node, date);
+                    loadEventInfo(Optional.of(event), node, date);
                     stage.show();
                 } catch (Exception e) {
                     e.printStackTrace();

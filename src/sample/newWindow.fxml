@@ -10,47 +10,35 @@
 
 <BorderPane fx:id="newEvent" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" stylesheets="@newWindow.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EventsController">
    <top>
-      <VBox styleClass="myPane" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Tytuł" />
-            <TextField fx:id="eventTitle" />
-         </children>
-      </VBox>
+       <VBox styleClass="myPane" BorderPane.alignment="CENTER">
+           <Label text="Tytuł"/>
+           <TextField fx:id="eventTitle"/>
+       </VBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myPane" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Wiadomość" />
-            <TextArea fx:id="eventMessage" prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </VBox>
+       <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myPane" BorderPane.alignment="CENTER">
+           <Label text="Wiadomość"/>
+           <TextArea fx:id="eventMessage" prefHeight="200.0" prefWidth="200.0"/>
+       </VBox>
    </center>
    <bottom>
-      <HBox prefWidth="200.0" styleClass="myPane" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
-                     <children>
-                        <Label text="OD" />
-                        <TextField fx:id="eventFrom" layoutX="10.0" layoutY="31.0" />
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
-                     <children>
-                        <Label text="DO" />
-                        <TextField fx:id="eventTo" />
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-spacing: 10px;" HBox.hgrow="ALWAYS">
-               <children>
-                  <Button fx:id="eventCancel" mnemonicParsing="false" onMouseClicked="#close" style="-fx-translate-y: 10px;" text="Anuluj" />
-                  <Button fx:id="eventAccept" mnemonicParsing="false" style="-fx-translate-y: 10px;" text="Akceptuj" />
-               </children>
-            </HBox>
-         </children>
-      </HBox>
+       <HBox prefWidth="200.0" styleClass="myPane" BorderPane.alignment="CENTER">
+           <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
+                   <Label text="OD"/>
+                   <TextField fx:id="eventFrom" layoutX="10.0" layoutY="31.0"/>
+               </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
+                   <Label text="DO"/>
+                   <TextField fx:id="eventTo"/>
+               </VBox>
+           </HBox>
+           <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                 style="-fx-spacing: 10px;" HBox.hgrow="ALWAYS">
+               <Button fx:id="eventCancel" mnemonicParsing="false" onMouseClicked="#close"
+                       style="-fx-translate-y: 10px;" text="Anuluj"/>
+               <Button fx:id="eventAccept" mnemonicParsing="false" style="-fx-translate-y: 10px;" text="Akceptuj"/>
+           </HBox>
+       </HBox>
    </bottom>
 </BorderPane>
