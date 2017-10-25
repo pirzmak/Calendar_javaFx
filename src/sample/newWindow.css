@@ -5,3 +5,7 @@
 .myCenter {
     -fx-alignment: center;
 }
+
+.error {
+    -fx-text-fill: red;
+}

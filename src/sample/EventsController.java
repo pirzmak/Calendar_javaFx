@@ -15,6 +15,7 @@ import sample.calendar.Event;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -32,8 +33,18 @@ public class EventsController extends RootController {
     private TextField eventTo;
     @FXML
     private Button eventAccept;
+    @FXML
+    private Button eventCancel;
+    @FXML
+    private Label titleLabel;
+    @FXML
+    private Label fromLabel;
+    @FXML
+    private Label toLabel;
 
     private Calendar calendar;
+
+    private DateTimeFormatter format = DateTimeFormatter.ofPattern("HH:mm");
 
     void init(Parent root) throws Exception {
         this.stage = new Stage();
@@ -49,6 +60,23 @@ public class EventsController extends RootController {
         eventFrom = (TextField) stage.getScene().lookup("#eventFrom");
         eventTo = (TextField) stage.getScene().lookup("#eventTo");
         eventAccept = (Button) stage.getScene().lookup("#eventAccept");
+        eventCancel = (Button) stage.getScene().lookup("#eventCancel");
+
+        titleLabel = ((Label)stage.getScene().lookup("#titleLabel"));
+        fromLabel = ((Label)stage.getScene().lookup("#fromLabel"));
+        toLabel = ((Label)stage.getScene().lookup("#toLabel"));
+
+        eventTitle.textProperty().addListener((obs,old,niu)->{
+            setValidationTitleLabel(niu);
+        });
+
+        eventFrom.textProperty().addListener((obs,old,niu)->{
+            setValidationDataLabel(fromLabel, isValidateDate(niu), "OD");
+        });
+
+        eventTo.textProperty().addListener((obs,old,niu)->{
+            setValidationDataLabel(toLabel, isValidateDate(niu), "DO");
+        });
     }
 
     void show() {
@@ -61,19 +89,29 @@ public class EventsController extends RootController {
     }
 
     void loadEventInfo(Optional<Event> event, Node node, LocalDate date) {
+        refreshStyles();
         if(event.isPresent()) {
             eventTitle.setText(event.get().getTitle());
             eventMessage.setText(event.get().getMessage());
-            DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:mm");
             eventFrom.setText(format.format(event.get().getFrom()));
             eventTo.setText(format.format(event.get().getTo()));
 
+            eventAccept.setText("Zapisz");
+
             eventAccept.setOnMouseClicked(clicked -> {
-                if(eventTitle.getText().length() > 0) {
+                if(isValidate(eventTitle.getText(), eventFrom.getText(), eventTo.getText())) {
                     uploadEvent(event.get(), node);
                     close();
                 }
             });
+
+            eventCancel.setText("Usuń");
+
+            eventCancel.setOnMouseClicked(clicked -> {
+                deleteEvent(event.get(), date, node.getParent().getParent().getParent().getParent().getParent().getParent());
+                close();
+            });
+
         } else {
             eventTitle.setText("");
             eventMessage.setText("");
@@ -81,10 +119,16 @@ public class EventsController extends RootController {
             eventTo.setText("");
 
             eventAccept.setOnMouseClicked(clicked -> {
-                if(eventTitle.getText().length() > 0) {
+                if(isValidate(eventTitle.getText(), eventFrom.getText(), eventTo.getText())) {
                     addNewEvent(date, node);
                     close();
                 }
+            });
+
+            eventCancel.setText("Anuluj");
+
+            eventCancel.setOnMouseClicked(clicked -> {
+                close();
             });
         }
     }
@@ -95,17 +139,77 @@ public class EventsController extends RootController {
                 .sorted(Comparator.comparing(Event::getFrom))
                 .collect(Collectors.toList());
 
+        getCalendarGridCellEventsBox(node).getChildren().clear();
+
         events.forEach(e -> getCalendarGridCellEventsBox(node).getChildren().add(this.createNewEventPane(e, date)));
+    }
+
+    private void refreshStyles() {
+        titleLabel.setText("Tytuł");
+        titleLabel.getStyleClass().clear();
+        fromLabel.setText("OD");
+        fromLabel.getStyleClass().clear();
+        toLabel.setText("DO");
+        toLabel.getStyleClass().clear();
+    }
+
+    private boolean isValidate(String title, String start, String end){
+        setValidationTitleLabel(title);
+
+        boolean dateValidation = isValidateDate(start) && isValidateDate(end) && LocalTime.parse(start).isBefore(LocalTime.parse(end));
+        setValidationDataLabel(fromLabel, dateValidation, "OD");
+        setValidationDataLabel(toLabel, dateValidation, "DO");
+
+        return !title.isEmpty() && dateValidation;
+    }
+
+    private void setValidationTitleLabel(String title){
+        if(title.isEmpty()){
+            titleLabel.setText("Tytuł (Nie może być pusty)");
+            titleLabel.getStyleClass().add("error");
+        } else {
+            titleLabel.setText("Tytuł");
+            titleLabel.getStyleClass().clear();
+        }
+    }
+
+    private void setValidationDataLabel(Label dataLabel, boolean validate, String type){
+        if(!validate) {
+            dataLabel.setText(type + " (hh:mm)");
+            dataLabel.getStyleClass().add("error");
+        } else {
+            dataLabel.setText(type);
+            dataLabel.getStyleClass().clear();
+        }
+    }
+
+    private boolean isValidateDate(String date) {
+        if(date.isEmpty())
+            return false;
+        try {
+            LocalTime.parse(date);
+            return true;
+        } catch (DateTimeParseException e){
+            return false;
+        }
     }
 
     private void uploadEvent(Event event, Node node) {
         event.setTitle(eventTitle.getText());
-        ((Label) ((StackPane) node).getChildren().get(0)).setText(eventTitle.getText());
+        event.setMessage(eventMessage.getText());
+        event.setFrom(LocalTime.parse(eventFrom.getText()));
+        event.setTo(LocalTime.parse(eventTo.getText()));
+        ((Label) ((StackPane) node).getChildren().get(0)).setText(format.format(event.getFrom()) + "-" + format.format(event.getTo()) + " " + event.getTitle());
         close();
     }
 
+    private void deleteEvent(Event event, LocalDate date, Node node) {
+        calendar.deleteEvent(event);
+        refreshEvents(node, date);
+    }
+
     private void addNewEvent(LocalDate date, Node node) {
-        Event newEvent = new Event(date, LocalTime.NOON, LocalTime.MIDNIGHT, eventTitle.getText(), eventMessage.getText());
+        Event newEvent = new Event(date, LocalTime.parse(eventFrom.getText()),LocalTime.parse(eventTo.getText()), eventTitle.getText(), eventMessage.getText());
         calendar.addEvent(newEvent);
         refreshEvents(node, date);
     }
@@ -114,7 +218,6 @@ public class EventsController extends RootController {
         StackPane eventPane = new StackPane();
         eventPane.getStyleClass().add("eventPanel");
 
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:mm");
         Label label = new Label(format.format(event.getFrom()) + "-" + format.format(event.getTo()) + " " + event.getTitle());
         label.getStyleClass().add("eventLabel");
 

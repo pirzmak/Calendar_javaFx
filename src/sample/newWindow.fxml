@@ -11,7 +11,7 @@
 <BorderPane fx:id="newEvent" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" stylesheets="@newWindow.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EventsController">
    <top>
        <VBox styleClass="myPane" BorderPane.alignment="CENTER">
-           <Label text="Tytuł"/>
+           <Label fx:id="titleLabel" text="Tytuł"/>
            <TextField fx:id="eventTitle"/>
        </VBox>
    </top>
@@ -25,11 +25,11 @@
        <HBox prefWidth="200.0" styleClass="myPane" BorderPane.alignment="CENTER">
            <HBox prefHeight="100.0" prefWidth="200.0">
                <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
-                   <Label text="OD"/>
+                   <Label fx:id="fromLabel" text="OD"/>
                    <TextField fx:id="eventFrom" layoutX="10.0" layoutY="31.0"/>
                </VBox>
                <VBox prefHeight="200.0" prefWidth="100.0" styleClass="myCenter">
-                   <Label text="DO"/>
+                   <Label fx:id="toLabel" text="DO"/>
                    <TextField fx:id="eventTo"/>
                </VBox>
            </HBox>

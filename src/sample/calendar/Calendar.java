@@ -7,7 +7,7 @@ import java.util.Vector;
 import java.util.stream.Collectors;
 
 public class Calendar {
-    private Vector<Event> events;
+    private List<Event> events;
     private int numOfWeeks;
 
     public Calendar() {
@@ -23,7 +23,7 @@ public class Calendar {
             InputStream buffer = new BufferedInputStream(file);
             ObjectInput input = new ObjectInputStream (buffer);
             try{
-                events = (Vector<Event>)input.readObject();
+                events = (List<Event>)input.readObject();
             }
             finally{
                 input.close();
@@ -57,6 +57,13 @@ public class Calendar {
 
     public void addEvent(Event event) {
         this.events.add(event);
+        writeToFile();
+    }
+
+    public void deleteEvent(Event event) {
+        this.events = this.events.stream()
+                .filter(e -> !e.equals(event))
+                .collect(Collectors.toList());
         writeToFile();
     }
 
